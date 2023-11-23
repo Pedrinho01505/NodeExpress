@@ -12,7 +12,12 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 app.post('/cadastrar/salvar', (requisicao, resposta) => {
-    console.log(requisicao.body)
+    const nome = requisicao.body.nome
+    const email = requisicao.body.email
+    const senha = requisicao.body.senha
+    console.log(`O nome do usuário é: ${nome}`)
+    console.log(`O email do usuário é: ${email}`)
+    
 })
 
 app.get('/cadastrar', (requisicao,resposta) => {
